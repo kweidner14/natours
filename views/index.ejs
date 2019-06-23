@@ -72,9 +72,27 @@
       </div>
       <div class="col-1-of-2">
         <div class="composition">
-          <img src="../images/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-          <img src="../images/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-          <img src="../images/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+
+          <!-- Density and Resolution Switching -->
+          <img srcset="images/nat-1.jpg 300w, images/nat-1-large.jpg 1000w" alt="Photo 1"
+               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 18.75em"
+               class="composition__photo composition__photo--p1"
+               src="images/nat-1-large.jpg"> <!-- making use of width descriptor -->
+
+          <img srcset="images/nat-2.jpg 300w, images/nat-2-large.jpg 1000w" alt="Photo 2"
+               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 18.75em"
+               class="composition__photo composition__photo--p2"
+               src="images/nat-2-large.jpg">
+
+          <img srcset="images/nat-3.jpg 300w, images/nat-3-large.jpg 1000w" alt="Photo 3"
+               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 18.75em"
+               class="composition__photo composition__photo--p3"
+               src="images/nat-3-large.jpg">
+
+
+<!--          <img src="../images/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo&#45;&#45;p1">-->
+<!--          <img src="../images/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo&#45;&#45;p2">-->
+<!--          <img src="../images/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo&#45;&#45;p3">-->
         </div>
       </div>
     </div>
@@ -336,7 +354,17 @@
 
 <footer class="footer">
   <div class="footer__logo-box">
-    <img src="images/logo-green-2x.png" alt="Full logo" class="footer__logo">
+
+    <!-- Art Direction and Density Switching -->
+    <picture class="footer__logo">
+      <source srcset="images/logo-green-small-1x.png 1x, images/logo-green-small-2x.png 2x"
+              media="(max-width: 37.5em)"> <!-- max-width comes from phone breakpoint-->
+      <img srcset="images/logo-green-1x.png 1x, images/logo-green-2x.png 2x" alt="Full logo" class="footer__logo"
+           src="images/logo-green-2x.png">
+    </picture>
+
+
+
   </div>
   <div class="row">
     <div class="col-1-of-2">
