@@ -1,5 +1,5 @@
 .header {
-  height: 95vh;
+  height: 85vh;
   background-image: linear-gradient(
                   to right bottom,
                   rgba($color-primary-light, 0.8),
@@ -9,19 +9,24 @@
   background-position: top;
   position: relative;
 
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  // Browser check for clip-path
+  @supports (clip-path: polygon(0 0 )) or (-webkit-clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    height: 95vh;
+  }
 
-  // IF res is > than 192 Dots Per Inch,
+  // IF res is > than 192 Dots Per Inch or 2DPR,
   //  AND width > 600px, use higher res image
   //   OR IF width > 2000px, use higher res image
   //  ** 37.5em == 600px  &&  125em == 2000px **
   @media (min-resolution: 192dpi) and (min-width: 37.5em),
+         (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
          (min-width: 125em) {
     background-image: linear-gradient(
                     to right bottom,
-                    rgba($color-secondary-light, 0.8),
-                    rgba($color-secondary-dark, 0.8)),
+                    rgba($color-primary-light, 0.8),
+                    rgba($color-primary-dark, 0.8)),
     url(../images/hero.jpg);
   }
 
