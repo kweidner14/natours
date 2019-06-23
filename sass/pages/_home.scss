@@ -4,7 +4,10 @@
   margin-top: -20vh;
 
   @include respond(tab-port) {
-    padding: 20rem 0;
+    padding: 25rem 0;
+  }
+  @include respond(tab-land) {
+    padding: 35rem 5rem;
   }
 }
 
@@ -18,16 +21,28 @@
   background-size: cover;
 
   transform: skewY(-7deg);
+  @include respond(tab-land) {
+    transform: skewY(-13.5deg);
+  }
+
   margin-top: -11.5rem;
 
   // Direct child selector; selects all '*' first-level children elements
   & > * {
     transform: skewY(7deg);
+
+    @include respond(tab-land) {
+      transform: skewY(13.5deg);
+    }
   }
 
   @include respond(tab-port) {
     padding: 10rem 0;
   }
+  @include respond(tab-land) {
+    padding: 20rem 5rem;
+  }
+
 }
 
 .section-tours {
