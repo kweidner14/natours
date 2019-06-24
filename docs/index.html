@@ -6,9 +6,9 @@
 
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-  <link rel="stylesheet" href="/stylesheets/icon-font.css">
-  <link rel="stylesheet" href="/stylesheets/style.css">
-  <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+  <link rel="stylesheet" href="public/stylesheets/icon-font.css">
+  <link rel="stylesheet" href="public/stylesheets/style.css">
+  <link rel="shortcut icon" type="image/png" href="public/images/favicon.png">
 
   <title>Natours | Exciting tours for adventurous people</title>
 </head>
@@ -74,17 +74,17 @@
         <div class="composition">
 
           <!-- Density and Resolution Switching -->
-          <img srcset="public/images/nat-1.jpg 300w, images/nat-1-large.jpg 1000w" alt="Photo 1"
+          <img srcset="public/images/nat-1.jpg 300w, public/images/nat-1-large.jpg 1000w" alt="Photo 1"
                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 18.75em"
                class="composition__photo composition__photo--p1"
                src="public/images/nat-1-large.jpg"> <!-- making use of width descriptor -->
 
-          <img srcset="public/images/nat-2.jpg 300w, images/nat-2-large.jpg 1000w" alt="Photo 2"
+          <img srcset="public/images/nat-2.jpg 300w, public/images/nat-2-large.jpg 1000w" alt="Photo 2"
                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 18.75em"
                class="composition__photo composition__photo--p2"
                src="public/images/nat-2-large.jpg">
 
-          <img srcset="public/images/nat-3.jpg 300w, images/nat-3-large.jpg 1000w" alt="Photo 3"
+          <img srcset="public/images/nat-3.jpg 300w, public/images/nat-3-large.jpg 1000w" alt="Photo 3"
                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 18.75em"
                class="composition__photo composition__photo--p3"
                src="public/images/nat-3-large.jpg">
@@ -272,7 +272,7 @@
     <div class="row">
       <div class="story">
         <figure class="story__shape">
-          <img src="/images/nat-8.jpg" alt="Person on a tour" class="story__img">
+          <img src="public/images/nat-8.jpg" alt="Person on a tour" class="story__img">
           <figcaption class="story__caption">Mary Smith</figcaption>
         </figure>
         <div class="story__text">
@@ -286,7 +286,7 @@
     <div class="row">
       <div class="story">
         <figure class="story__shape">
-          <img src="/images/nat-9.jpg" alt="Person on a tour" class="story__img">
+          <img src="public/images/nat-9.jpg" alt="Person on a tour" class="story__img">
           <figcaption class="story__caption">Jack Wilson</figcaption>
         </figure>
         <div class="story__text">
@@ -357,9 +357,9 @@
 
     <!-- Art Direction and Density Switching -->
     <picture class="footer__logo">
-      <source srcset="../public/images/logo-green-small-1x.png 1x, images/logo-green-small-2x.png 2x"
+      <source srcset="../public/images/logo-green-small-1x.png 1x, ../public/images/logo-green-small-2x.png 2x"
               media="(max-width: 37.5em)"> <!-- max-width comes from phone breakpoint-->
-      <img srcset="public/images/logo-green-1x.png 1x, images/logo-green-2x.png 2x" alt="Full logo" class="footer__logo"
+      <img srcset="public/images/logo-green-1x.png 1x, ../public/images/logo-green-2x.png 2x" alt="Full logo" class="footer__logo"
            src="../public/images/logo-green-2x.png">
     </picture>
 
