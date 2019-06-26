@@ -8,7 +8,6 @@
     "dev": "node ./bin/www",
     "begin": "npm-run-all --parallel serve watch:sass",
     "devserver": "npm run dev | npm run begin",
-
     "compile:sass": "node-sass sass/main.scss public/stylesheets/style.comp.css",
     "concat:css": "concat -o public/stylesheets/style.concat.css public/stylesheets/icon-font.css public/stylesheets/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/stylesheets/style.concat.css -o public/stylesheets/style.prefix.css",
